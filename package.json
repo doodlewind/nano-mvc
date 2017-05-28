@@ -1,0 +1,29 @@
+{
+  "name": "nano-mvc",
+  "version": "0.1.0",
+  "description": "Demo MVC framework in 40 lines, 1KB",
+  "main": "src/framework/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev rollup -c --watch",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "example": "http-server . -s -p 10008"
+  },
+  "keywords": [
+    "mvc",
+    "framework"
+  ],
+  "author": "doodlewind",
+  "repository": "https://github.com/doodlewind/nano-mvc",
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-plugin-external-helpers": "^6.0.0",
+    "babel-preset-es2015": "^6.0.0",
+    "cross-env": "^3.0.0",
+    "http-server": "^0.10.0",
+    "rollup": "^0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^3.2.2"
+  },
+  "license": "MIT"
+}
