@@ -1,7 +1,9 @@
 export function TodoView ({ todos }) {
   const todosList = todos.map(todo => `
     <div>
-      <span>${todo.text}</span>
+      <span class="todo ${todo.done ? 'done' : 'pending'}">
+        ${todo.text}
+      </span>
       <button data-id="${todo.id}" class="btn-delete">
         Delete
       </button>
@@ -10,6 +12,18 @@ export function TodoView ({ todos }) {
         <input data-id="${todo.id}"/>
         <button data-id="${todo.id}" class="btn-update">
           Update
+        </button>
+        <button
+          data-id="${todo.id}"
+          class="btn-finish ${todo.done ? 'done' : 'pending'}"
+        >
+          Finish
+        </button>
+        <button
+          data-id="${todo.id}"
+          class="btn-redo ${todo.done ? 'done' : 'pending'}"
+        >
+          Redo
         </button>
       </span>
     </div>
